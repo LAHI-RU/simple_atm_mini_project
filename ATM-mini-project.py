@@ -14,21 +14,23 @@ if pin_code != password:
     exit()
 
 while True:
-    print("Press 1 for Balance")
-    print("Press 2 for Withdraw the Cash")
-    print("Enter Press 3 for Deposit the Cash")
-    print("Enter Press 4 for EXIT")
+    print("+++++++++++++++++++++++++++++++++")
+    print("+ Press 1 for Balance           +")
+    print("+ Press 2 for Withdraw the Cash +")
+    print("+ Press 3 for Deposit the Cash  +")
+    print("+ Press 4 for EXIT              +")
+    print("+++++++++++++++++++++++++++++++++")
 
     try:
         option = int(input("Please Enter Your Choice: "))
     except ValueError:
         print("Please Enter a Valid Option")
-        print("===================================================")
+        print("")
         continue
 
     if option == 1:
         print(f"Your Current Balance is = {balance}")
-        print("===================================================")
+        print("             ===                    \n")
     elif option == 2:
         withdraw_amount = int(input("Please Enter Your Withdraw Amount: "))
         if withdraw_amount > balance:
@@ -37,15 +39,15 @@ while True:
             balance -= withdraw_amount
             print(f"{withdraw_amount} is debited from your account")
             print(f"Your Current Balance is = {balance}")
-        print("===================================================")
+        print("             ===                    \n")
     elif option == 3:
         deposit_amount = int(input("Please Enter Your Deposit Amount: "))
         balance += deposit_amount
         print(f"Your Updated Balance is = {balance}")
-        print("===================================================")
+        print("             ===                    \n")
     elif option == 4:
         print("Thank You! ")
         break
     else:
         print("Please Enter a Valid Option")
-        print("===================================================")
+        print("             ===                   \n ")
